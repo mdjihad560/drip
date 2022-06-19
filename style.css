@@ -630,7 +630,7 @@ ul.drip-footer-social li{
 
 
 /* fdsfds 00*/
-.landex-ctn-preloader {
+.drip-ctn-preloader {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -647,11 +647,11 @@ ul.drip-footer-social li{
   top: 0;
   width: 100%;
   z-index: 9000;
-  transition: all 0.4s ease-in-out;
+  transition: all 0.8s ease-in-out;
   background-color: white;
 }
 
-.landex-ctn-preloader .loader {
+.drip-ctn-preloader .loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -660,5 +660,19 @@ ul.drip-footer-social li{
   font-size: 0;
   z-index: 1;
   pointer-events: none;
-  transition: all 0.4s;
+  transition: all 0.8s;
+}
+
+video{
+  width: 100%;
+}
+
+#preloader {
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:#fff;/* change if the mask should be a color other than white */
+	z-index:99; /* makes sure it stays on top */
 }

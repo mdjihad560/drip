@@ -83,21 +83,27 @@ $(window).on("load" ,function(){
 
 
 // preloader
-function loader() {
-  $(window).on('load', function () {
-    $('#landex-ctn-preloader').addClass('loaded');
-    $("#landex-loading").fadeOut(8000);
-    // Una vez haya terminado el preloader aparezca el scroll
+// function loader() {
+//   $(window).on('load', function () {
+//     $('#drip-ctn-preloader').addClass('loaded');
+//     $("#drip-loading").delay(8000).fadeOut(8000);
+//     // Una vez haya terminado el preloader aparezca el scroll
+//     $('body').delay(8000).css({'overflow':'visible'});
+//     if ($('#drip-ctn-preloader').hasClass('loaded')) {
+//       // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
+//       $('#drip-preloader').delay(8000).queue(function () {
+//         $(this).remove();
+//       });
+//     }
+//   });
+// }
+// loader();
 
-    if ($('#landex-ctn-preloader').hasClass('loaded')) {
-      // Es para que una vez que se haya ido el preloader se elimine toda la seccion preloader
-      $('#landex-preloader').delay(8000).queue(function () {
-        $(this).remove();
-      });
-    }
-  });
-}
-loader();
+$(window).on('load', function() { // makes sure the whole site is loaded 
+  $('#video').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
+        $('body').delay(650).css({'overflow':'visible'});
+})
 
 
 
